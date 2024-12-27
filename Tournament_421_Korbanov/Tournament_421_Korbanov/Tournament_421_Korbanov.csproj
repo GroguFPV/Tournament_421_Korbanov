@@ -122,6 +122,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="org_page\org_auth_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="org_page\org_nav_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="org_page\org_reg_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="org_page\Tournament_list_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="org_page\tournament_uc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="player_pages\Player_auth_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +162,21 @@
   <ItemGroup>
     <Compile Include="Navigation_page.xaml.cs">
       <DependentUpon>Navigation_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\org_auth_page.xaml.cs">
+      <DependentUpon>org_auth_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\org_nav_page.xaml.cs">
+      <DependentUpon>org_nav_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\org_reg_page.xaml.cs">
+      <DependentUpon>org_reg_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\Tournament_list_page.xaml.cs">
+      <DependentUpon>Tournament_list_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\tournament_uc.xaml.cs">
+      <DependentUpon>tournament_uc.xaml</DependentUpon>
     </Compile>
     <Compile Include="player_pages\Player_auth_page.xaml.cs">
       <DependentUpon>Player_auth_page.xaml</DependentUpon>

@@ -1,18 +1,18 @@
-﻿<Page x:Class="Tournament_421_Korbanov.player_pages.Player_reg_page"
+﻿<Page x:Class="Tournament_421_Korbanov.org_page.org_reg_page"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Tournament_421_Korbanov.player_pages"
+      xmlns:local="clr-namespace:Tournament_421_Korbanov.org_page"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Player_reg_page">
+      Title="org_reg_page">
 
     <Grid Background="White">
         <StackPanel Orientation="Vertical" VerticalAlignment="Center"
                     HorizontalAlignment="Center">
             <TextBlock FontSize="16" 
-                       HorizontalAlignment="Center">Регистрация для игрока</TextBlock>
+                       HorizontalAlignment="Center">Регистрация для организатора</TextBlock>
             <TextBlock>Имя</TextBlock>
             <TextBox Width="260" Height="20"
                      x:Name="nameTb" Margin="0,5,0,0"></TextBox>
@@ -21,9 +21,7 @@
             <TextBox Width="260" Height="20"
                      x:Name="number_tb" Margin="0,5,0,0"></TextBox>
 
-            <TextBlock>Никнейм</TextBlock>
-            <TextBox Width="260" Height="20"
-                     x:Name="nicknameTb" Margin="0,5,0,0"></TextBox>
+            
 
             <TextBlock>Логин</TextBlock>
             <TextBox Width="260" Height="20" x:Name="LoginTb"

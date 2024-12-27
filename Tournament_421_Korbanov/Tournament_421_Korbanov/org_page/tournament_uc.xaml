@@ -5,8 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Tournament_421_Korbanov.org_page"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="100" d:DesignWidth="600">
+    <Border BorderBrush="Black" BorderThickness="1">
+        <Grid Background="White">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Width="75" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+                    <TextBlock HorizontalAlignment="Center">Начало</TextBlock>
+                    <TextBlock x:Name="Start_date_tb" HorizontalAlignment="Center">11.11.2024</TextBlock>
+                    <TextBlock Margin="0,10,0,0" HorizontalAlignment="Center">Конец</TextBlock>
+                    <TextBlock x:Name="End_date_tb" HorizontalAlignment="Center" >11.11.2024</TextBlock>
+                </StackPanel>
+
+                <StackPanel Width="200" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+                    <TextBlock HorizontalAlignment="Center">Название:</TextBlock>
+                    <TextBlock x:Name="title_tb" HorizontalAlignment="Center">Турник по игре</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">По игре:</TextBlock>
+                    <TextBlock x:Name="game_tb" HorizontalAlignment="Center">Игра</TextBlock>
+
+                </StackPanel>
+                <StackPanel Width="200" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0">
+                    <TextBlock HorizontalAlignment="Center">Категория игры:</TextBlock>
+                    <TextBlock x:Name="game_category_tb" HorizontalAlignment="Center">Одиночный</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">Призовой фонд</TextBlock>
+                    <TextBlock x:Name="fond_tb" HorizontalAlignment="Center">10000</TextBlock>
+
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
 </UserControl>

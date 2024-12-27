@@ -48,5 +48,10 @@ namespace Tournament_421_Korbanov.player_pages
         {
             NavigationService.Navigate(new Player_reg_page());
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Navigation_page());
+        }
     }
 }

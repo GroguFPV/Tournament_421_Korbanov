@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Korbanov.db;
 
 namespace Tournament_421_Korbanov.org_page
 {
@@ -23,6 +24,15 @@ namespace Tournament_421_Korbanov.org_page
         public Tournament_list_page()
         {
             InitializeComponent();
+            Refresh();
+        }
+        public void Refresh()
+        {
+            var list = App.db.Tournament.ToList();
+            foreach (Tournament tournament in list)
+            {
+                Tournament_list_WP.Children.Add(new tournament_uc(tournament));
+            }
         }
     }
 }

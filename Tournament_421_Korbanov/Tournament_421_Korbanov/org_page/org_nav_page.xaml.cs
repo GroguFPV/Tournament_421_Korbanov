@@ -27,7 +27,7 @@ namespace Tournament_421_Korbanov.org_page
 
         private void player_zone_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Tournament_list_page());
         }
     }
 }
