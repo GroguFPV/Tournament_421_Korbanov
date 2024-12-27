@@ -125,6 +125,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="org_page\add_edit_tournament_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="org_page\org_auth_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,6 +169,9 @@
   <ItemGroup>
     <Compile Include="Navigation_page.xaml.cs">
       <DependentUpon>Navigation_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="org_page\add_edit_tournament_page.xaml.cs">
+      <DependentUpon>add_edit_tournament_page.xaml</DependentUpon>
     </Compile>
     <Compile Include="org_page\org_auth_page.xaml.cs">
       <DependentUpon>org_auth_page.xaml</DependentUpon>

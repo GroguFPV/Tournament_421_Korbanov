@@ -25,6 +25,7 @@ namespace Tournament_421_Korbanov.org_page
         {
             InitializeComponent();
             Refresh();
+            status_cb.SelectedIndex= 3;
         }
         public void Refresh()
         {
@@ -69,6 +70,11 @@ namespace Tournament_421_Korbanov.org_page
         private void status_cb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Refresh();
+        }
+
+        private void AddTournament_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new add_edit_tournament_page());
         }
     }
 }

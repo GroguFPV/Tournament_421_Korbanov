@@ -29,7 +29,7 @@
             <ScrollViewer Height="300" Width="600" VerticalScrollBarVisibility="Visible">
                 <WrapPanel  x:Name="Tournament_list_WP"></WrapPanel>
             </ScrollViewer>
-            
+            <Button Height="30" Width="150" x:Name="AddTournament" Click="AddTournament_Click">Добавить турнир</Button>
         </StackPanel>
     </Grid>
 </Page>
