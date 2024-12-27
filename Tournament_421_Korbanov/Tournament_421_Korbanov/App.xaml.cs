@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Tournament_421_Korbanov.db;
 
 namespace Tournament_421_Korbanov
 {
@@ -13,5 +14,6 @@ namespace Tournament_421_Korbanov
     /// </summary>
     public partial class App : Application
     {
+        public static Tournament_421_KorbanovEntities db = new Tournament_421_KorbanovEntities();
     }
 }

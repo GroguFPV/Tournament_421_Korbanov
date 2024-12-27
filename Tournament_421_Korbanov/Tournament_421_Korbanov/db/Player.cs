@@ -17,5 +17,6 @@ namespace Tournament_421_Korbanov.db
         public int id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public string Nickname { get; set; }
     }
 }
