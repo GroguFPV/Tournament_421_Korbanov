@@ -33,6 +33,7 @@ namespace Tournament_421_Korbanov.db
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Tournament> Tournament { get; set; }
+        public virtual DbSet<Tournament_status> Tournament_status { get; set; }
         public virtual DbSet<Tournament_type> Tournament_type { get; set; }
     }
 }

@@ -29,10 +29,46 @@ namespace Tournament_421_Korbanov.org_page
         public void Refresh()
         {
             var list = App.db.Tournament.ToList();
+
+            if (!string.IsNullOrEmpty(SearchTb.Text))
+            {
+                list = list.Where(x => x.Name.ToLower().Contains(SearchTb.Text.ToLower())).ToList();
+            }
+
+            
+            if (status_cb.SelectedItem != null)
+            {
+                if (status_cb.SelectedIndex == 0)
+                {
+                    list = list.Where(x => x.Status_id == 2).ToList();
+                }
+                else if (status_cb.SelectedIndex == 1)
+                {
+
+                    list = list.Where(x => x.Status_id == 1).ToList();
+                }
+                else if (status_cb.SelectedIndex == 3)
+                {
+
+                    list = list.ToList();
+                }
+            }
+
+            Tournament_list_WP.Children.Clear();
             foreach (Tournament tournament in list)
             {
                 Tournament_list_WP.Children.Add(new tournament_uc(tournament));
             }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Refresh();
+        }
+
+        private void status_cb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Refresh();
         }
     }
 }

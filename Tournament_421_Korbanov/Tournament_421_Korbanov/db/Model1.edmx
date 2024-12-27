@@ -82,6 +82,14 @@
           <Property Name="Type_id" Type="int" />
           <Property Name="Game_id" Type="int" />
           <Property Name="Prize_fund" Type="int" />
+          <Property Name="Status_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Tournament_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Tournament_type">
           <Key>
@@ -111,6 +119,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Tournament_Tournament_status">
+          <End Role="Tournament_status" Type="Self.Tournament_status" Multiplicity="0..1" />
+          <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament_status">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tournament">
+              <PropertyRef Name="Status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Tournament_Tournament_type">
           <End Role="Tournament_type" Type="Self.Tournament_type" Multiplicity="0..1" />
           <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
@@ -132,9 +152,14 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tournament" EntityType="Self.Tournament" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tournament_status" EntityType="Self.Tournament_status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tournament_type" EntityType="Self.Tournament_type" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Tournament_Game" Association="Self.FK_Tournament_Game">
             <End Role="Game" EntitySet="Game" />
+            <End Role="Tournament" EntitySet="Tournament" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tournament_Tournament_status" Association="Self.FK_Tournament_Tournament_status">
+            <End Role="Tournament_status" EntitySet="Tournament_status" />
             <End Role="Tournament" EntitySet="Tournament" />
           </AssociationSet>
           <AssociationSet Name="FK_Tournament_Tournament_type" Association="Self.FK_Tournament_Tournament_type">
@@ -155,9 +180,14 @@
           <EntitySet Name="sysdiagrams" EntityType="Tournament_421_KorbanovModel.sysdiagrams" />
           <EntitySet Name="Team" EntityType="Tournament_421_KorbanovModel.Team" />
           <EntitySet Name="Tournament" EntityType="Tournament_421_KorbanovModel.Tournament" />
+          <EntitySet Name="Tournament_status" EntityType="Tournament_421_KorbanovModel.Tournament_status" />
           <EntitySet Name="Tournament_type" EntityType="Tournament_421_KorbanovModel.Tournament_type" />
           <AssociationSet Name="FK_Tournament_Game" Association="Tournament_421_KorbanovModel.FK_Tournament_Game">
             <End Role="Game" EntitySet="Game" />
+            <End Role="Tournament" EntitySet="Tournament" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tournament_Tournament_status" Association="Tournament_421_KorbanovModel.FK_Tournament_Tournament_status">
+            <End Role="Tournament_status" EntitySet="Tournament_status" />
             <End Role="Tournament" EntitySet="Tournament" />
           </AssociationSet>
           <AssociationSet Name="FK_Tournament_Tournament_type" Association="Tournament_421_KorbanovModel.FK_Tournament_Tournament_type">
@@ -236,8 +266,18 @@
           <Property Name="Type_id" Type="Int32" />
           <Property Name="Game_id" Type="Int32" />
           <Property Name="Prize_fund" Type="Int32" />
+          <Property Name="Status_id" Type="Int32" />
           <NavigationProperty Name="Game" Relationship="Tournament_421_KorbanovModel.FK_Tournament_Game" FromRole="Tournament" ToRole="Game" />
+          <NavigationProperty Name="Tournament_status" Relationship="Tournament_421_KorbanovModel.FK_Tournament_Tournament_status" FromRole="Tournament" ToRole="Tournament_status" />
           <NavigationProperty Name="Tournament_type" Relationship="Tournament_421_KorbanovModel.FK_Tournament_Tournament_type" FromRole="Tournament" ToRole="Tournament_type" />
+        </EntityType>
+        <EntityType Name="Tournament_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tournament" Relationship="Tournament_421_KorbanovModel.FK_Tournament_Tournament_status" FromRole="Tournament_status" ToRole="Tournament" />
         </EntityType>
         <EntityType Name="Tournament_type">
           <Key>
@@ -256,6 +296,18 @@
             </Principal>
             <Dependent Role="Tournament">
               <PropertyRef Name="Game_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tournament_Tournament_status">
+          <End Type="Tournament_421_KorbanovModel.Tournament_status" Role="Tournament_status" Multiplicity="0..1" />
+          <End Type="Tournament_421_KorbanovModel.Tournament" Role="Tournament" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tournament_status">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tournament">
+              <PropertyRef Name="Status_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -346,12 +398,21 @@
           <EntitySetMapping Name="Tournament">
             <EntityTypeMapping TypeName="Tournament_421_KorbanovModel.Tournament">
               <MappingFragment StoreEntitySet="Tournament">
+                <ScalarProperty Name="Status_id" ColumnName="Status_id" />
                 <ScalarProperty Name="Prize_fund" ColumnName="Prize_fund" />
                 <ScalarProperty Name="Game_id" ColumnName="Game_id" />
                 <ScalarProperty Name="Type_id" ColumnName="Type_id" />
                 <ScalarProperty Name="End_date" ColumnName="End_date" />
                 <ScalarProperty Name="Start_date" ColumnName="Start_date" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tournament_status">
+            <EntityTypeMapping TypeName="Tournament_421_KorbanovModel.Tournament_status">
+              <MappingFragment StoreEntitySet="Tournament_status">
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

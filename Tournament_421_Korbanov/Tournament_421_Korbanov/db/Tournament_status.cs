@@ -12,19 +12,18 @@ namespace Tournament_421_Korbanov.db
     using System;
     using System.Collections.Generic;
     
-    public partial class Tournament
+    public partial class Tournament_status
     {
-        public int id { get; set; }
-        public string Name { get; set; }
-        public Nullable<System.DateTime> Start_date { get; set; }
-        public Nullable<System.DateTime> End_date { get; set; }
-        public Nullable<int> Type_id { get; set; }
-        public Nullable<int> Game_id { get; set; }
-        public Nullable<int> Prize_fund { get; set; }
-        public Nullable<int> Status_id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Tournament_status()
+        {
+            this.Tournament = new HashSet<Tournament>();
+        }
     
-        public virtual Game Game { get; set; }
-        public virtual Tournament_status Tournament_status { get; set; }
-        public virtual Tournament_type Tournament_type { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tournament> Tournament { get; set; }
     }
 }
