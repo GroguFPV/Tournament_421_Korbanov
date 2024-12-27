@@ -41,8 +41,10 @@ namespace Tournament_421_Korbanov.player_pages
             {
                 Player newPlayer = new Player
                 {
+                    Name = nameTb.Text,
+                    Phone_number = number_tb.Text,
                     Login = LoginTb.Text,
-                    Nickname = nameTb.Text,
+                    Nickname = nicknameTb.Text,
                     Password = PassTb.Text,
                 };
                 App.db.Player.Add(newPlayer);

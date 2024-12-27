@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Korbanov.player_pages;
 
 namespace Tournament_421_Korbanov
 {
@@ -23,6 +24,7 @@ namespace Tournament_421_Korbanov
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Navigation_page());
         }
     }
 }

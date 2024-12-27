@@ -122,6 +122,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="player_pages\Player_auth_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="player_pages\Player_info_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="player_pages\Player_nav_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="player_pages\Player_reg_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +142,15 @@
   <ItemGroup>
     <Compile Include="Navigation_page.xaml.cs">
       <DependentUpon>Navigation_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="player_pages\Player_auth_page.xaml.cs">
+      <DependentUpon>Player_auth_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="player_pages\Player_info_page.xaml.cs">
+      <DependentUpon>Player_info_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="player_pages\Player_nav_page.xaml.cs">
+      <DependentUpon>Player_nav_page.xaml</DependentUpon>
     </Compile>
     <Compile Include="player_pages\Player_reg_page.xaml.cs">
       <DependentUpon>Player_reg_page.xaml</DependentUpon>

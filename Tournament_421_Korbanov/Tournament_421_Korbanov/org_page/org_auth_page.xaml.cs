@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Tournament_421_Korbanov.player_pages
+namespace Tournament_421_Korbanov.org_page
 {
     /// <summary>
-    /// Логика взаимодействия для Player_nav_page.xaml
+    /// Логика взаимодействия для org_auth_page.xaml
     /// </summary>
-    public partial class Player_nav_page : Page
+    public partial class org_auth_page : Page
     {
-        public Player_nav_page()
+        public org_auth_page()
         {
             InitializeComponent();
-        }
-
-        private void player_zone_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Player_info_page());
         }
     }
 }

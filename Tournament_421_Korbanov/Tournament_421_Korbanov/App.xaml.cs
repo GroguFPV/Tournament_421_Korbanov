@@ -15,5 +15,8 @@ namespace Tournament_421_Korbanov
     public partial class App : Application
     {
         public static Tournament_421_KorbanovEntities db = new Tournament_421_KorbanovEntities();
+        public static Player totalPlayer;
+        public static Organizer totalOrganizer;
+        
     }
 }
