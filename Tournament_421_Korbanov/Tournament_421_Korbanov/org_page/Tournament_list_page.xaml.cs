@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace Tournament_421_Korbanov.org_page
 {
     /// <summary>
-    /// Логика взаимодействия для org_nav_page.xaml
+    /// Логика взаимодействия для Tournament_list_page.xaml
     /// </summary>
-    public partial class org_nav_page : Page
+    public partial class Tournament_list_page : Page
     {
-        public org_nav_page()
+        public Tournament_list_page()
         {
             InitializeComponent();
-        }
-
-        private void player_zone_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

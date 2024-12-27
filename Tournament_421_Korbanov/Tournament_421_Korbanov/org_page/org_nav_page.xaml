@@ -8,7 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="org_nav_page">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Width="150" Height="30" x:Name="player_zone" 
+                    BorderBrush="Black" Background="#FFE2E2E2" FontSize="16" Click="player_zone_Click">Список турниров</Button>
+            <Button Width="150" Height="30" x:Name="admin_zone" BorderBrush="Black" Background="#FFE2E2E2" FontSize="16" Margin="0,10,0,0">2</Button>
+            <Button Width="150" Height="30" x:Name="viewer_zone" BorderBrush="Black" Background="#FFE2E2E2" FontSize="16" Margin="0,10,0,0">3</Button>
+        </StackPanel>
     </Grid>
 </Page>
