@@ -23,7 +23,13 @@ namespace Tournament_421_Korbanov.org_page
     {
         public add_edit_tournament_page()
         {
+
             InitializeComponent();
+            if(App.totalOrganizer == null)
+            {
+                add_or_edit.Visibility = Visibility.Hidden;
+            }
+
             StatusTb.IsReadOnly= true;
             StatusTb.Text = "Планируется";
             var Category = App.db.Tournament_type.ToList();

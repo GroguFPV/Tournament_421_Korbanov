@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Korbanov.org_page;
 
 namespace Tournament_421_Korbanov.player_pages
 {
@@ -28,6 +29,11 @@ namespace Tournament_421_Korbanov.player_pages
         private void player_zone_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Player_info_page());
+        }
+
+        private void admin_zone_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Tournament_list_page());
         }
     }
 }

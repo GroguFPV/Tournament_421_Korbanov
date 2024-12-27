@@ -25,6 +25,10 @@ namespace Tournament_421_Korbanov.org_page
         {
             InitializeComponent();
             Refresh();
+            if (App.totalOrganizer == null)
+            {
+                AddTournament.Visibility = Visibility.Hidden;
+            }
             status_cb.SelectedIndex= 3;
         }
         public void Refresh()
